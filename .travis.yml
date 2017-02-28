@@ -1,0 +1,14 @@
+dist: trusty
+language: cpp
+
+matrix:
+  include:
+    - os: linux
+      compiler: gcc
+      env: COMPILER=g++
+    - os: osx
+      compiler: clang
+      env: COMPILER=clang++
+
+script:
+  - ./.travis/build.sh
